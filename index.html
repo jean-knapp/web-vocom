@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<style>
+		body {
+			font-family: 'Arial';
+			
+		}
+		
+		table {
+			
+			width: 100%; 
+			max-width: 800px; 
+			margin-left: auto; 
+			margin-right: auto;
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		
+		td {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			padding-left: 4px;
+			padding-right: 4px;
+			margin: 0px;
+			border: 1px solid black;
+		}
+		
+		.field_title {
+			font-size: 10px;
+			line-height: 0;
+		}
+				
+		.field_title_multiline {
+			font-size: 10px;
+			line-height: 1;
+		}
+		
+		p {
+			line-height: 0;
+		}
+		
+		input {
+			font-size: 15px;
+			width: 100%;
+			box-sizing: border-box;
+			border: 0;
+			background: none;
+		 	text-transform: uppercase;
+		}
+		
+		input[type='radio'], 
+		input[type='checkbox'] {
+			display: none;
+		}
+		
+		input[type='radio']+label>p, input[type='checkbox']+label>p{
+			position: relative;
+			text-align: center;
+		}
+		
+		input[type='radio']+label>.selected,
+		input[type='checkbox']+label>.selected{
+			opacity: 0;
+			position: absolute;
+			font-weight: bold;
+			top: -4px;
+			font-size: 20px;
+			left: 50%;
+			transform: translate(-50%, 0);
+
+		}
+		
+		input[type='radio']:checked+label>.selected,
+		input[type='checkbox']:checked+label>.selected{
+			opacity: 1;
+		}
+		
+		.no-border {
+			border: none;
+		}
+	</style>
+<table>
+	<tr>
+		<td colspan="2" style="min-width: 120px; text-align: center"><img src="logo_decea.png" alt="DECEA" width="64px"/></td>
+		<td colspan="16">
+			<p style="font-size: 12px; text-align: center">COMANDO DA AERONÁUTICA</p>
+
+			<p style="font-size: 18px; text-align: center">DEPARTAMENTO DE CONTROLE DO ESPAÇO AÉREO</p>
+
+			<p style="font-size: 30px; font-weight: bold; text-align: center">PLANO VOCOM</p>
+		</td>
+	</tr>	
+	<tr>
+		<td rowspan="3" colspan="2">
+			<p class="field_title">PRIORIDADE</p>
+			<p style="font-size: 40px; font-weight: bold">FF</p>
+		</td>
+		<td colspan="11">
+			<p class="field_title">DESTINATÁRIO (S)</p>
+			<p></p>
+		</td>
+		<td colspan="5">
+			<p class="field_title">QUITAÇÃO</p>
+			<p></p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="11">&nbsp;</td>
+		<td colspan="5">
+			<p class="field_title">GRUPO DATA-HORA</p>
+			<p></p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="6">
+			<p class="field_title">HORA DE APRESENTAÇÃO</p>
+			<p></p>
+		</td>
+		<td colspan="5">
+			<p class="field_title">REMETENTE</p>
+			<p></p>
+		</td>
+		<td colspan="5">
+			<p class="field_title">RUBRICA</p>
+			<p></p>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">
+			<p class="field_title">1 - TIPO DE MSG</p>
+			<p style="font-size: 20px">PLA VOCOM</p>
+		</td>
+		<td rowspan="2" colspan="6">
+			<p class="field_title_multiline">2- CÓDIGO DA AERONAVE / FORMAÇÃO</p>
+			<input value="ESC VERMELHO"/>
+		</td>
+		<td rowspan="2" colspan="5">
+			<p class="field_title">3 - IDENTIFICAÇÃO DA AERONAVE</p>
+			<input value="FAB5933"/>
+		</td>
+		<td colspan="5">
+			<p class="field_title">4 - TIPO DE VOCOM</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="position: relative">
+			<input type="radio" id="vocom_a" name="vocom_type"/>
+			<label for="vocom_a">
+				<p class="selected">X</p>
+				<p>A</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="radio" id="vocom_b" name="vocom_type"/>
+			<label for="vocom_b">
+				<p class="selected">X</p>
+				<p>B</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="radio" id="vocom_c" name="vocom_type"/>
+			<label for="vocom_c">
+				<p class="selected">X</p>
+				<p>C</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="radio" id="vocom_d" name="vocom_type"/>
+			<label for="vocom_d">
+				<p class="selected">X</p>
+				<p>D</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="radio" id="vocom_misto" name="vocom_type"/>
+			<label for="vocom_misto">
+				<p class="selected">X</p>
+				<p>MISTO</p>
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<p class="field_title_multiline">5 - QUANTIDADE - TIPO (S) DE AERONAVE (S)</p>
+			<input value="2 A-29"/>
+		</td>
+		<td colspan="6">
+			<p class="field_title">6 - EQUIPAMENTO</p>
+			<input value="SDFIU/S"/>
+		</td>
+		<td colspan="10">
+			<p class="field_title">7 - AERÓDROMO DE PARTIDA - HORA</p>
+			<input value="SBBE - 1740Z"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<p class="field_title_multiline">8 - VELOCIDADE DE CRUZEIRO - NÍVEL</p>
+			<input value="N0220 F190"/>
+		</td>
+		<td colspan="16">
+			<p class="field_title">9 - ROTA</p>
+			<input value="DCT"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="19">
+			<p class="field_title"></p>
+			<input value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="19">
+			<p class="field_title"></p>
+			<input value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="19">
+			<p class="field_title"></p>
+			<input value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="19">
+			<p class="field_title"></p>
+			<input value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="19">
+			<p class="field_title"></p>
+			<input value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="19">
+			<p class="field_title"></p>
+			<input value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<p class="field_title_multiline">10 - AERÓDROMO DE DESTINO</p>
+			<input value="SBNT"/>
+		</td>
+		<td colspan="6">
+			<p class="field_title">11 - EET TOTAL</p>
+			<input value="0350"/>
+		</td>
+		<td colspan="5">
+			<p class="field_title">12 - AERÓDROMOS DE ALTERNATIVA</p>
+			<input value="SBSG"/>
+		</td>
+		<td colspan="5">
+			<p class="field_title">13- AUTONOMIA</p>
+			<input value="0530"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="18">
+			<p class="field_title">14 - OUTROS DADOS</p>
+			<input value="PER/B  RMK/ OPR 1GAV3"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="8">
+			<p class="field_title">&nbsp;</p>
+			<input value=""/>
+		</td>
+		<td colspan="5">
+			<p class="field_title">15 - TIPO DE MISSÃO</p>
+			<input value="25F"/>
+		</td>
+		<td colspan="5">
+			<p class="field_title">16 - CONFIGURAÇÃO</p>
+			<input value="25"/>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">
+			<p class="field_title">17 -PESSOAS A BORDO</p>
+			<input value="4"/>
+		</td>
+		<td colspan="3">
+			<p class="field_title_multiline">18 - EQ RD EMERG</p>
+		</td>
+		<td colspan="3">
+			<p class="field_title_multiline">19 - EQ SBC</p>
+		</td>
+		<td colspan="4">
+			<p class="field_title">20 - COLETES</p>
+		</td>
+		<td rowspan="2">
+			<p class="field_title">21 - QNT - CPCD</p>
+			<input value="04-04"/>
+		</td>
+		<td rowspan="2" colspan="5" style="padding: 0; margin: 0; vertical-align: bottom">
+			<table style="margin: 0; padding: 0">
+				<tr>
+					<td style="border: none" colspan="2">
+						<p class="field_title">ABRIGO - COR</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="position: relative; width: 35px; border: none; padding: 0">
+						<table><tr><td style="border-left: 0; border-bottom: 0">
+						<input type="checkbox" id="abrigo"/>
+						<label for="abrigo">
+							<p class="selected">X</p>
+							<p>C</p>
+						</label>
+						</td></tr></table>
+					</td>
+					<td style="border: none">
+						<input value="CINZA"/>
+					</td>
+				</tr>
+			</table>
+			
+		</td>
+	</tr>
+	<tr>
+		<td style="position: relative">
+			<input type="checkbox" id="radio_u"/>
+			<label for="radio_u">
+				<p class="selected">X</p>
+				<p>U</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="checkbox" id="radio_v"/>
+			<label for="radio_v">
+				<p class="selected">X</p>
+				<p>V</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="checkbox" id="radio_e"/>
+			<label for="radio_e">
+				<p class="selected">X</p>
+				<p>E</p>
+			</label>
+		</td>
+		
+		
+		<td style="position: relative">
+			<input type="checkbox" id="sbc_s"/>
+			<label for="sbc_s">
+				<p class="selected">X</p>
+				<p>S</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="checkbox" id="sbc_m"/>
+			<label for="sbc_m">
+				<p class="selected">X</p>
+				<p>M</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="checkbox" id="sbc_j"/>
+			<label for="sbc_j">
+				<p class="selected">X</p>
+				<p>J</p>
+			</label>
+		</td>
+		
+		
+		<td style="position: relative">
+			<input type="checkbox" id="colete_l"/>
+			<label for="colete_l">
+				<p class="selected">X</p>
+				<p>L</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="checkbox" id="colete_f"/>
+			<label for="colete_f">
+				<p class="selected">X</p>
+				<p>F</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="checkbox" id="colete_u"/>
+			<label for="colete_u">
+				<p class="selected">X</p>
+				<p>U</p>
+			</label>
+		</td>
+		<td style="position: relative">
+			<input type="checkbox" id="colete_v"/>
+			<label for="colete_v">
+				<p class="selected">X</p>
+				<p>V</p>
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="18">
+			<p class="field_title">22 - COR E MARCA DA AERONAVE</p>
+			<input value="CAMUFLADA"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="18" style="border-bottom: none">
+			<p class="field_title">23 – OBSERVAÇÕES</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 35px; padding-left: 0; border-top: none; border-left: none; border-right: none">
+			<table>
+				<tr>
+					<td style="position: relative; border-bottom: none">
+						<input type="checkbox" id="obs"/>
+						<label for="obs">
+							<p class="selected">X</p>
+							<p>N</p>
+						</label>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td colspan="17" style="border-top: none; border-left: none">
+			<input value="CAMUFLADA"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="18">
+			<p class="field_title"></p>
+			<input value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="12">
+			<p class="field_title"></p>
+			<input value=""/>
+		</td>
+		<td colspan="6">
+			<p class="field_title">24 - PILOTO EM COMANDO / LIDER DA FORMAÇÃO</p>
+			<input value="1T AV ADÔNIS, V. T. P."/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="12">
+			<p class="field_title">25 - APRESENTADO POR</p>
+			<input value="1T AV ADÔNIS, V. T. P."/>
+		</td>
+		<td colspan="6">
+			<p class="field_title">26 - ASSINATURA</p>
+			
+		</td>
+	</tr>
+</table>
+	
+</body>
+</html>
